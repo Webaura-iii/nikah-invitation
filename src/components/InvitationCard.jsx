@@ -27,7 +27,7 @@ function makeCalendar(){
  const end=new Date(start.getTime()+2*60*60*1000);
  const fmt=x=>x.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z');
  const escape=s=>String(s).replace(/\\/g,'\\\\').replace(/,/g,'\\,').replace(/;/g,'\\;').replace(/\n/g,'\\n');
- const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Nikah Invitation//EN','BEGIN:VEVENT',`DTSTART:${fmt(start)}`,`DTEND:${fmt(end)}`,`SUMMARY:${escape(d.groom+' & '+d.bride+' — Wedding')}`,`LOCATION:${escape(d.venue)}`,`DESCRIPTION:${escape(d.message)}`,'END:VEVENT','END:VCALENDAR'].join('\r\n');
+ const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Nikah Invitation//EN','BEGIN:VEVENT',\`DTSTART:\${fmt(start)}\`,\`DTEND:\${fmt(end)}\`,\`SUMMARY:\${escape(d.groom+' & '+d.bride+' — Wedding')}\`,\`LOCATION:\${escape(d.venue)}\`,\`DESCRIPTION:\${escape(d.message)}\`,'END:VEVENT','END:VCALENDAR'].join('\r\n');
  const url=URL.createObjectURL(new Blob([body],{type:'text/calendar;charset=utf-8'})); const a=document.createElement('a');a.href=url;a.download='wedding-invitation.ics';a.click();URL.revokeObjectURL(url);
 }
 export default function InvitationCard({ onReplay }){
