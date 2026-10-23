@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { CalendarDays, Clock3, MapPin, ChevronDown, ArrowUp, Check, Languages, Heart, Volume2, VolumeX, RotateCcw, Flower2, Sparkles, Menu, X } from 'lucide-react'
 
