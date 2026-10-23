@@ -89,7 +89,7 @@ export default function App(){
           <span className="envelope-back"/>
           <motion.span className="envelope-flap" animate={opening?{rotateX:-178}:{rotateX:0}} transition={{duration:.75,delay:.22}}/>
           <motion.span className="invitation-insert" animate={opening?{y:-115,scale:1.06}:{y:0,scale:1}} transition={{duration:.8,delay:.55,ease:[.2,.7,.2,1]}}><span>بِسْمِ اللَّهِ</span><i>Wedding Invitation</i><span className="insert-rule"/></motion.span>
-          <motion.span className="wax-seal" animate={opening?{scale:1.35,rotate:20,opacity:0}:{scale:[1,1.035,1]}} transition={opening?{duration:.3}:{duration:2.8,repeat:Infinity,ease:'easeInOut'}}><span>ن</span></motion.span>
+          <motion.span className="wax-seal" animate={opening?{scale:1.35,rotate:20,opacity:0}:{scale:[1,1.035,1]}} transition={opening?{duration:.3}:{duration:2.8,repeat:Infinity,ease:'easeInOut'}}><span>❧</span></motion.span>
         </motion.button>
         <p className="tap-hint"><Sparkles size={13}/>{t.tap}</p>
         <p className="opening-names">{wedding.bride} <span>&</span> {wedding.groom}</p>
